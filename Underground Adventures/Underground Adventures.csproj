@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B64D2DC-71F7-4902-935F-2E5CFFDA706B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Underground_Adventures</RootNamespace>
+    <AssemblyName>Underground Adventures</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Background.cs" />
+    <Compile Include="Box.cs" />
+    <Compile Include="Chest.cs" />
+    <Compile Include="Coin.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ghost.cs" />
+    <Compile Include="Goblin.cs" />
+    <Compile Include="IDraw.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Monster.cs" />
+    <Compile Include="Obstacle.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skeleton.cs" />
+    <Compile Include="Spider.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LGGothic.ttf" />
+    <None Include="Resources\WarriorL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarriorL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarriorL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarriorR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarriorR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarriorR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkeletonL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkeletonL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkeletonL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkeletonR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkeletonR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkeletonR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spider1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spider2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoblinL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoblinL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoblinL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoblinR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoblinR1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoblinR2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Obstacle11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoxD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkeletonRD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkeletonLD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoblinRD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoblinLD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GhostD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarriorLD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarriorRD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Border1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChestO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BorderH1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
